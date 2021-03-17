@@ -12,7 +12,7 @@
   5. Application will be available at http://localhost:8080/index.php?config=process_conf_sample
 
 # Configuration:
-The process defined in the configuration file must be placed in the project/config folder. This file must contain a JSON file with the structure 
+The process is determined by a configuration file that must be placed in the project / config folder. This file must contain a JSON file with the structure 
 
 ```
 { 
@@ -33,7 +33,7 @@ Each step should be described with this data structure:
 }
 ```
 
-The name of the action it's actually the name of the class that implements this action, this name should match the file and class names in the project/src/Command/ folder, the class structure described below. Action parameters are regular or associative array with variable names, these variables can be specified in the "data" section or be the result of previous steps - if the "result" section of the step defined than action's result will be stored in the variable with the specified name and it can be used on the next steps. An associative array with params is helpful when action uses params in the different goals, you can see it on the sample of Power action - for this action essential to know what is the base and what is exponent, so values available in the execution method by their names from the configuration. At the same time, for the Sum action, all parameters have the same importance this action just sum everything that is passed to it and thus better to pass parameters as a regular array.
+The name of the сommand it's actually the name of the class that implements this action, this name should match the file and class names in the project/src/Command/ folder, the class structure described below. Action parameters are regular or associative array with variable names, these variables can be specified in the "data" section or be the result of previous steps - if the "result" section of the step defined than action's result will be stored in the variable with the specified name and it can be used on the next steps. An associative array with params is helpful when action uses params in the different goals, you can see it on the sample of Power action - for this action essential to know what is the base and what is exponent, so values available in the execution method by their names from the configuration. At the same time, for the Sum action, all parameters have the same importance this action just sum everything that is passed to it and thus better to pass parameters as a regular array.
 
 You can prepare as many configuration files as you need, to execute a specific process you should put the name of the configuration file without extension to the 'config' parameter in the URL of executor script like shown in the installation instructions 'index.php?config=process_conf_sample'.
 
