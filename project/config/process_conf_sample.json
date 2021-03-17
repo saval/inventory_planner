@@ -1,0 +1,36 @@
+{
+    "steps": [
+        {
+          "command": "Power",
+          "params": {
+            "base": "x",
+            "exp": "2"
+          },
+          "result": "c"
+        },
+        {
+          "command": "Multiplication",
+          "params": ["a", "c"],
+          "result": "s1"
+        },
+        {
+          "command": "Multiplication",
+          "params": ["b", "x"],
+          "result": "s2"
+        },
+        {
+          "command": "Sum",
+          "params": ["s1", "s2"],
+          "result": "t"
+        },
+        {
+          "command": "Show",
+          "params": ["t"]
+        }
+    ],
+    "data": {
+        "a": "1",
+        "x": "2",
+        "b": "3"
+    }
+}
